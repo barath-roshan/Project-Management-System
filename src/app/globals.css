@@ -1,0 +1,53 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+:root {
+  --background: #000000;
+  --foreground: #ffffff;
+  --primary: #52bfad; /* Teal from the graph */
+  --secondary: #121214; /* Card background from the image */
+  --accent: #90d3c8;
+  --muted: #64748b;
+  --border: #27272a;
+  --card: #121214;
+  --card-foreground: #ffffff;
+  --radius: 1rem;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+}
+
+.glass-card {
+  background: #121214;
+  border: 1px solid #27272a;
+  border-radius: 1rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+.heatmap-cell {
+  width: 24px;
+  height: 24px;
+  border-radius: 4px;
+  background: #27272a;
+}
+
+.heatmap-cell.active-1 { background: #1e293b; }
+.heatmap-cell.active-2 { background: #3b82f6; }
+.heatmap-cell.active-3 { background: #60a5fa; }
+.heatmap-cell.active-teal { background: #52bfad; }
+
+.pro-gradient {
+  background: linear-gradient(135deg, #90d3c8 0%, #b3def0 100%);
+}
+
+.dark .glass {
+  background: rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
